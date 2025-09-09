@@ -1,0 +1,22 @@
+# WordPress
+wp-content/
+wp-config.php
+wp-settings.php
+wp-admin/
+wp-includes/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node modules
+node_modules/
+
+# Composer vendor
+/vendor/

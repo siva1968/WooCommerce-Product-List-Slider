@@ -1,0 +1,410 @@
+/* WooCommerce Product List Slider - Frontend Styles */
+
+/* Ensure parent containers have proper height */
+.astra-shop-thumbnail-wrap,
+.woocommerce-LoopProduct-link,
+.woocommerce-loop-product__link {
+	display: block !important;
+	min-height: 300px !important;
+}
+
+/* Clean Production Slider Styles - Fixed Height */
+.wc-product-list-slider-container,
+.wc-product-list-slider-container[style*="height"] {
+	min-height: 300px !important;
+	height: 300px !important;
+	max-height: 300px !important;
+	display: block !important;
+	position: relative !important;
+	overflow: hidden !important;
+	border: 1px solid #ddd !important;
+	border-radius: 8px !important;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+	background: #fff !important;
+	box-sizing: border-box !important;
+	cursor: pointer !important;
+	transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Subtle hover effects */
+.wc-product-list-slider-container:hover {
+	transform: translateY(-2px) !important;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+	border-color: #bbb !important;
+}
+
+/* Force override any inline styles */
+.wc-product-list-slider-container[style] {
+	height: 300px !important;
+	min-height: 300px !important;
+	max-height: 300px !important;
+	overflow: hidden !important;
+}
+
+/* Clean forced container class */
+.wcpls-forced-container {
+	min-height: 300px !important;
+	height: 300px !important;
+	display: block !important;
+	position: relative !important;
+	overflow: hidden !important;
+	border: 1px solid #ddd !important;
+	border-radius: 8px !important;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+	background: #fff !important;
+	box-sizing: border-box !important;
+}
+
+.wc-product-list-slider-container .swiper-slide {
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: 300px !important;
+	min-height: 300px !important;
+	max-height: 300px !important;
+	display: block !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	overflow: hidden !important;
+	z-index: inherit !important;
+}
+
+/* FORCE visible slide to be on top */
+.wc-product-list-slider-container .swiper-slide[style*="opacity: 1"] {
+	z-index: 9999 !important;
+}
+
+/* FIXED image visibility rules - full height */
+.wc-product-list-slider-container .swiper-slide img,
+.wc-product-list-slider-container img.slider-image,
+.wcpls-forced-container img,
+.wcpls-forced-container .swiper-slide img {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	width: 100% !important;
+	height: 300px !important;
+	min-height: 300px !important;
+	max-height: 300px !important;
+	object-fit: cover !important;
+	object-position: center center !important;
+	border-radius: 8px !important;
+	background: #f5f5f5 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	z-index: 5 !important;
+	box-sizing: border-box !important;
+	flex-shrink: 0 !important;
+	outline: none !important;
+	clip: auto !important;
+	clip-path: none !important;
+	transform: none !important;
+	filter: none !important;
+	max-width: none !important;
+	min-width: auto !important;
+}
+
+/* Override any theme styles that might hide images */
+.woocommerce ul.products li.product .wc-product-list-slider-container img,
+.woocommerce .products .product .wc-product-list-slider-container img,
+.ast-archive-post .wc-product-list-slider-container img,
+.product .wc-product-list-slider-container img {
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	height: 300px !important;
+	min-height: 300px !important;
+	max-height: 300px !important;
+}
+
+/* Force theme compatibility for Astra */
+.ast-archive-post .wc-product-list-slider-container,
+.ast-archive-post .astra-shop-thumbnail-wrap .wc-product-list-slider-container {
+	height: 300px !important;
+	min-height: 300px !important;
+	max-height: 300px !important;
+	overflow: hidden !important;
+}
+
+/* Hide all pagination elements */
+.css-pagination,
+.swiper-pagination,
+.wc-product-list-slider-container .swiper-pagination {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+/* Container Base Styles */
+.wc-product-list-slider-container {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	border-radius: 8px;
+	background: #f9f9f9;
+	box-sizing: border-box;
+}
+
+/* Swiper Container */
+.wc-product-list-slider-container .swiper {
+	width: 100%;
+	height: auto;
+	min-height: 200px;
+	border-radius: inherit;
+}
+
+.wc-product-list-slider-container .swiper-wrapper {
+	display: flex;
+	align-items: stretch;
+}
+
+.wc-product-list-slider-container .swiper-slide {
+	flex-shrink: 0;
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Images */
+.wc-product-list-slider-container .slider-image,
+.wc-product-list-slider-container .single-product-image {
+	width: 100%;
+	height: auto;
+	max-height: 300px;
+	display: block;
+	object-fit: cover;
+	border-radius: inherit;
+	transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.wc-product-list-slider-container:hover .slider-image {
+	transform: scale(1.02);
+}
+
+/* Fade effect styles - only apply when swiper is initialized */
+.wc-product-list-slider-container .swiper-fade .swiper-slide {
+	transition: opacity 500ms ease !important;
+	opacity: 0 !important;
+}
+
+/* Show first slide by default before Swiper initializes */
+.wc-product-list-slider-container .swiper-slide:first-child {
+	opacity: 1 !important;
+}
+
+/* Force active slide to be visible - override inline styles */
+.wc-product-list-slider-container .swiper-slide-active {
+	opacity: 1 !important;
+	z-index: 10 !important;
+}
+
+.wc-product-list-slider-container .swiper-slide[style*="opacity: 0"].swiper-slide-active {
+	opacity: 1 !important;
+}
+
+/* Emergency fixes for dimension issues */
+.wc-product-list-slider-container .swiper-slide {
+	width: 100% !important;
+	min-width: 100% !important;
+	max-width: 100% !important;
+}
+
+.wc-product-list-slider-container .swiper-wrapper {
+	width: 100% !important;
+}
+
+/* Override extreme transforms */
+.wc-product-list-slider-container .swiper-wrapper[style*="e+"] {
+	transform: translate3d(0px, 0px, 0px) !important;
+}
+
+/* Pure CSS Slider Styles - Force override for problematic Swiper */
+.wc-product-list-slider-container .swiper {
+	width: 100% !important;
+	height: auto !important;
+	position: relative !important;
+	overflow: hidden !important;
+	border-radius: inherit;
+}
+
+.wc-product-list-slider-container .swiper-wrapper {
+	position: relative !important;
+	width: 100% !important;
+	height: auto !important;
+	display: block !important;
+	transform: none !important;
+}
+
+.wc-product-list-slider-container .swiper-slide {
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: auto !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	transition: opacity 0.5s ease !important;
+	transform: none !important;
+}
+
+.wc-product-list-slider-container .swiper-slide img {
+	width: 100% !important;
+	height: auto !important;
+	max-height: 300px !important;
+	object-fit: cover !important;
+	display: block !important;
+}
+
+/* Ensure slides are positioned for fade effect */
+.wc-product-list-slider-container.swiper-fade .swiper-slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+/* Pagination */
+.wc-product-list-slider-container .swiper-pagination {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+}
+
+.wc-product-list-slider-container .swiper-pagination-bullet {
+	width: 8px;
+	height: 8px;
+	background: rgba(255, 255, 255, 0.7);
+	opacity: 0.6;
+	transition: opacity 0.2s ease;
+	margin: 0 2px;
+}
+
+.wc-product-list-slider-container .swiper-pagination-bullet-active {
+	opacity: 1;
+	background: #fff;
+}
+
+/* Loading State */
+.wc-product-list-slider-container.loading {
+	min-height: 200px;
+	background: #f8f8f8;
+}
+
+.wc-product-list-slider-container.loading::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin: -10px 0 0 -10px;
+	border: 2px solid #ccc;
+	border-top-color: #333;
+	border-radius: 50%;
+	animation: wcpls-spin 1s linear infinite;
+}
+
+@keyframes wcpls-spin {
+	to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.wc-product-list-slider-container {
+		border-radius: 4px;
+	}
+	
+	.wc-product-list-slider-container .slider-image,
+	.wc-product-list-slider-container .single-product-image {
+		max-height: 250px;
+	}
+	
+	.wc-product-list-slider-container .swiper-slide-active {
+		transform: none;
+	}
+	
+	.wc-product-list-slider-container .swiper-pagination-bullet {
+		width: 6px;
+		height: 6px;
+	}
+}
+
+@media (max-width: 480px) {
+	.wc-product-list-slider-container .swiper-pagination {
+		bottom: 5px;
+	}
+	
+	.wc-product-list-slider-container .slider-image,
+	.wc-product-list-slider-container .single-product-image {
+		max-height: 200px;
+	}
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+	.wc-product-list-slider-container .swiper-slide,
+	.wc-product-list-slider-container .slider-image {
+		transition: none;
+	}
+	
+	.wc-product-list-slider-container .swiper-slide-active {
+		transform: none;
+	}
+	
+	.wc-product-list-slider-container:hover .slider-image {
+		transform: none;
+	}
+}
+
+/* Theme Compatibility */
+/* Astra Theme */
+body.astra .wc-product-list-slider-container {
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Storefront Theme */
+body.storefront .wc-product-list-slider-container {
+	border: 1px solid #e1e1e1;
+}
+
+/* Twenty Twenty-One Theme */
+body.twentytwentyone .wc-product-list-slider-container {
+	background: var(--global--color-background, #fff);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	.wc-product-list-slider-container .swiper-pagination-bullet {
+		background: #000;
+		border: 1px solid #fff;
+	}
+	
+	.wc-product-list-slider-container .swiper-pagination-bullet-active {
+		background: #fff;
+		border: 1px solid #000;
+	}
+}
+
+/* Focus States for Accessibility */
+.wc-product-list-slider-container .swiper-pagination-bullet:focus {
+	outline: 2px solid #0073aa;
+	outline-offset: 2px;
+}
+
+/* RTL Support */
+[dir="rtl"] .wc-product-list-slider-container .swiper-pagination {
+	direction: rtl;
+}
